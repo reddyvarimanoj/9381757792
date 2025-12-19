@@ -1,15 +1,15 @@
 FROM python:3.10-slim
 
-WORKDIR /sample
+WORKDIR /app.py
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY sample .
+COPY app.py.
 
 EXPOSE 5000
 
-CMD ["python", "sample"]
+CMD ["python", "app.py"]
 
 
  
